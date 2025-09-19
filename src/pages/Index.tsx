@@ -13,21 +13,21 @@ const Index = () => {
       id: 1,
       title: "Electronic Fusion",
       category: "Album Production",
-      image: "/img/d5633958-1ff9-44bb-890c-24862202232d.jpg",
+      image: "/img/f09883be-d33e-4427-9069-40e0200959d4.jpg",
       description: "Современная электронная музыка с элементами джаза"
     },
     {
       id: 2,
       title: "Urban Beats",
       category: "Beat Making",
-      image: "/img/e2824574-d934-4fd6-9e73-5d1f77e3762d.jpg",
+      image: "/img/6076fb3f-65b8-431c-ba48-1f07c95ac7c0.jpg",
       description: "Hip-hop инструменталы для андеграунд артистов"
     },
     {
       id: 3,
       title: "Live Sessions",
       category: "Recording",
-      image: "/img/e60749ef-121e-45f1-a3ef-b1e7fdae0b4f.jpg",
+      image: "/img/711adb8c-7260-487b-ba0a-0c9b744f3b4a.jpg",
       description: "Запись живых выступлений в студийном качестве"
     }
   ]
