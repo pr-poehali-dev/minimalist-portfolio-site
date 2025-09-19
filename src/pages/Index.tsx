@@ -11,24 +11,27 @@ const Index = () => {
   const projects = [
     {
       id: 1,
-      title: "Electronic Fusion",
-      category: "Album Production",
-      image: "/img/f09883be-d33e-4427-9069-40e0200959d4.jpg",
-      description: "Современная электронная музыка с элементами джаза"
+      title: "Специальный репортаж",
+      category: "НТВ • Документальное кино",
+      image: "/img/8cbcc8d6-a965-43ca-84aa-1612790c4bb7.jpg",
+      description: "Документальный фильм о современных технологиях для программы 'Сегодня'",
+      duration: "45 мин"
     },
     {
       id: 2,
-      title: "Urban Beats",
-      category: "Beat Making",
-      image: "/img/6076fb3f-65b8-431c-ba48-1f07c95ac7c0.jpg",
-      description: "Hip-hop инструменталы для андеграунд артистов"
+      title: "Криминальная хроника",
+      category: "НТВ • Новости",
+      image: "/img/60c1d7d3-5c9b-496d-a5cc-9baa6bbbbc1a.jpg",
+      description: "Серия сюжетов для программы 'ЧП. Расследование'",
+      duration: "15 мин"
     },
     {
       id: 3,
-      title: "Live Sessions",
-      category: "Recording",
-      image: "/img/711adb8c-7260-487b-ba0a-0c9b744f3b4a.jpg",
-      description: "Запись живых выступлений в студийном качестве"
+      title: "Интервью с экспертами",
+      category: "НТВ • Аналитика",
+      image: "/img/eeea4cbd-be0d-4560-a4dd-e7a7f2c4c13d.jpg",
+      description: "Серия интервью для аналитических программ НТВ",
+      duration: "30 мин"
     }
   ]
 
@@ -38,17 +41,17 @@ const Index = () => {
       <section className="px-4 py-16 md:py-24 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-black mb-8">
-            ПРОДЮСЕР
+            ВИДЕО ПРОДЮСЕР
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Создаю музыку, которая вдохновляет. Работаю с артистами над проектами любого масштаба.
+            Создаю качественный видеоконтент для телевидения. Работаю с НТВ над документальными и новостными проектами.
           </p>
           <Button 
             size="lg" 
             className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg"
             onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Посмотреть работы
+            Смотреть портфолио
           </Button>
         </div>
       </section>
@@ -77,9 +80,12 @@ const Index = () => {
                 </div>
                 
                 <div className="p-6">
-                  <div className="mb-2">
+                  <div className="mb-2 flex items-center justify-between">
                     <span className="text-xs uppercase tracking-wider text-gray-500">
                       {project.category}
+                    </span>
+                    <span className="text-xs font-medium text-black bg-gray-100 px-2 py-1 rounded">
+                      {project.duration}
                     </span>
                   </div>
                   
@@ -92,6 +98,17 @@ const Index = () => {
                   }`}>
                     {project.description}
                   </p>
+                  
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="text-black hover:bg-gray-100 p-0 h-auto font-medium"
+                    >
+                      <Icon name="Play" size={16} className="mr-2" />
+                      Смотреть сюжет
+                    </Button>
+                  </div>
                 </div>
               </Card>
             ))}
@@ -114,15 +131,15 @@ const Index = () => {
                   Свяжитесь со мной
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Готов обсудить ваш проект и помочь воплотить музыкальные идеи в жизнь. 
-                  Работаю с артистами любого уровня.
+                  Готов обсудить ваш видеопроект. Работаю с телеканалами, 
+                  продакшн-студиями и независимыми проектами.
                 </p>
               </div>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Icon name="Mail" size={20} className="text-black" />
-                  <span className="text-gray-800">music@producer.com</span>
+                  <span className="text-gray-800">video@producer.tv</span>
                 </div>
                 
                 <div className="flex items-center gap-3">
@@ -141,7 +158,7 @@ const Index = () => {
                   <Icon name="Instagram" size={20} />
                 </Button>
                 <Button variant="outline" size="icon" className="border-black text-black hover:bg-black hover:text-white">
-                  <Icon name="Music" size={20} />
+                  <Icon name="Video" size={20} />
                 </Button>
                 <Button variant="outline" size="icon" className="border-black text-black hover:bg-black hover:text-white">
                   <Icon name="Youtube" size={20} />
@@ -210,7 +227,7 @@ const Index = () => {
       <footer className="bg-black text-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-gray-400">
-            © 2024 Продюсер. Все права защищены.
+            © 2024 Видео продюсер НТВ. Все права защищены.
           </p>
         </div>
       </footer>
